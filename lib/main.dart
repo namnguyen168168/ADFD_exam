@@ -37,7 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     super.initState();
-    filteredDestinations = destinations; // Initially show all destinations
+    filteredDestinations = destinations;
   }
 
   void _filterDestinations(String query) {
@@ -136,7 +136,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ],
           ),
         ),
-        // Popular Destinations
+       
         Expanded(
           child: GridView.count(
             crossAxisCount: 2,
@@ -237,9 +237,8 @@ class DestinationCard extends StatelessWidget {
         children: [
           Stack(
             children: [
-              // Use a fixed height for the image
               SizedBox(
-                height: 150, // Set a fixed height
+                height: 150,
                 child: Image.network(
                   imageUrl,
                   fit: BoxFit.cover,
